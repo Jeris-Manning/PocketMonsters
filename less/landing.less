@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  max-width: 1000px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: @pokemonYellow;
+  display: flex;
+  justify-content: center;
+  // align-items: flex-end;
+  .squirtle {
+    height: 200px;
+    width: auto;
+    margin-right: -19px;
+    z-index: 13;
+    align-self: flex-end;
+  }
+  .charmander {
+    height: 200px;
+    width: auto;
+    margin-left: -21px;
+    z-index: 13;
+    align-self: flex-end;
+  }
+}
+
+.mainPage {
+  background-color: @pokemonMediumBlue;
+  width: 80%;
+  max-width: 800px;
+  min-width: 600px;
+  border-left: 4px solid @pokemonMidnight;
+  border-right: 4px solid @pokemonMidnight;
+}
+.bookEnds {
+  // height: 348px;
+  height: 100vh;
+  position: absolute;
+  // left: 6px;
+  width: 99%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  .bookEndSpacer {
+    width: 293px;
+  }
+}
