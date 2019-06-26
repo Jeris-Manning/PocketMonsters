@@ -122,48 +122,144 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+@font-face {
+  font-family: 'Luckiest Guy';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Luckiest Guy Regular'), local('LuckiestGuy-Regular'), url(https://fonts.gstatic.com/s/luckiestguy/v9/_gP_1RrxsjcxVyin9l9n_j2hTd5z.ttf) format('truetype');
+}
 * {
   box-sizing: border-box;
 }
+.landing {
+  background-color: #0c0c0c;
+}
 .container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 950px;
   height: 100vh;
   margin: 0 auto;
   background-color: #f1b717;
+  border-right: 2px #1c2a58 solid;
+  border-left: 2px #1c2a58 solid;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  z-index: 4;
 }
-.container .squirtle {
+@media (max-width: 900px) {
+  .container {
+    flex-direction: row-reverse;
+  }
+}
+@media (max-width: 675px) {
+  .container {
+    border: none;
+  }
+}
+.squirtle {
   height: 200px;
   width: auto;
   margin-right: -19px;
   z-index: 13;
   align-self: flex-end;
 }
-.container .charmander {
+@media (max-width: 900px) {
+  .squirtle {
+    margin-left: -148px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 600px) {
+  .squirtle {
+    display: none;
+  }
+}
+.charmander {
   height: 200px;
   width: auto;
   margin-left: -21px;
   z-index: 13;
   align-self: flex-end;
 }
-.mainPage {
+@media (max-width: 900px) {
+  .charmander {
+    margin-left: 0;
+    margin-right: -152px;
+  }
+}
+@media (max-width: 600px) {
+  .charmander {
+    display: none;
+  }
+}
+.main {
   background-color: #3365a5;
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   max-width: 800px;
-  min-width: 600px;
+  min-width: 400px;
   border-left: 4px solid #0c0c0c;
   border-right: 4px solid #0c0c0c;
 }
-.bookEnds {
-  height: 100vh;
-  position: absolute;
-  width: 99%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+@media (max-width: 900px) {
+  .main {
+    width: 100%;
+  }
 }
-.bookEnds .bookEndSpacer {
-  width: 293px;
+.main h1 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 5rem;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+.main .haunterCTA {
+  max-width: 480px;
+  max-height: 519px;
+  width: 80%;
+  height: 87%;
+  background-image: url(../images/haunter.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+.main .pokemonDisplay {
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+  max-width: 720px;
+  min-width: 360px;
+}
+@media (max-width: 900px) {
+  .main .pokemonDisplay {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.main .pokemonDisplay .spriteContainer {
+  width: 60%;
+}
+@media (max-width: 900px) {
+  .main .pokemonDisplay .spriteContainer {
+    width: 80%;
+  }
+}
+.main .pokemonDisplay .spriteContainer img {
+  width: 90%;
+  height: auto;
+}
+.main .pokemonDisplay .pokemonStats {
+  width: 150px;
+  height: 200px;
+}
+@media (max-width: 900px) {
+  .main .pokemonDisplay .pokemonStats {
+    width: 80%;
+    flex-direction: column;
+  }
 }
