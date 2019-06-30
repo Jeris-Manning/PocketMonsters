@@ -120,11 +120,12 @@ const pokeArray = [
   })
 ];
 
-let clickTest = document.querySelector('.haunterCTA');
-clickTest.addEventListener('click', () => console.log(kingler.defense));
+// let clickTest = document.querySelector('.haunterCTA');
+// clickTest.addEventListener('click', () => console.log(kingler.defense));
 
 function displayPokemon(currentPokemon) {
   let monst = currentPokemon;
+  evoStage = this.evolutionStage;
   let pokeName = document.querySelector('.pokeName');
   pokeName.textContent = this.name;
   let pokeSprite = document.querySelector('.currentSprite');
@@ -146,6 +147,65 @@ function loadPokemon() {
   displayPokemon.call(pokeArray[pokeNumber]);
 }
 
-loadPokemon();
+TweenLite.from('.haunterCTA', 1.5, {
+  opacity: 0,
+  scale: 0,
+  bezier: [{ left: -400, top: 300 }, { left: 15, top: 100 }],
+  ease: Power2.easeOut
+});
 
-TweenLite.from('.haunterCTA', 1.5, { opacity: 0, scale: 0, y: 400, x: -500 });
+// console.log(demoBalls.classList);
+
+// class DynamicBalls {
+//   constructor(pokeball){
+//     this.pokeball = pokeball;
+//     addEventListener("mouseover", lidLift(this.pokeballTop));
+// console.log(this.classList)
+//   }
+// }
+
+let demoBalls = document.querySelectorAll('.pokeball');
+let ballTops = document.querySelectorAll('.pokeballTop');
+
+demoBalls[0].addEventListener('mouseover', () => {
+  ballTops[0].classList.remove('pokeballTop');
+});
+
+demoBalls[0].addEventListener('mouseleave', () => {
+  ballTops[0].classList.add('pokeballTop');
+});
+
+demoBalls[0].addEventListener('click', () => {
+  displayPokemon.call(pokeArray[0]);
+});
+
+demoBalls[1].addEventListener('mouseover', () => {
+  ballTops[1].classList.remove('pokeballTop');
+});
+
+demoBalls[1].addEventListener('mouseleave', () => {
+  ballTops[1].classList.add('pokeballTop');
+});
+
+demoBalls[1].addEventListener('click', () => {
+  displayPokemon.call(pokeArray[3]);
+});
+
+demoBalls[2].addEventListener('mouseover', () => {
+  ballTops[2].classList.remove('pokeballTop');
+});
+
+demoBalls[2].addEventListener('mouseleave', () => {
+  ballTops[2].classList.add('pokeballTop');
+});
+
+demoBalls[2].addEventListener('click', () => {
+  displayPokemon.call(pokeArray[5]);
+});
+
+// console.log(pokePile);
+
+// function lidLift(ball) {
+//   let newBall = ball;
+//   newBall.
+// }

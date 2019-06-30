@@ -9,8 +9,8 @@
   min-height: 100vh;
   margin: 0 auto;
   background-color: @pokemonYellow;
-  border-right: 2px @pokemonDarkBlue solid;
-  border-left: 2px @pokemonDarkBlue solid;
+  border-right: 2px @pokemonMidnight solid;
+  border-left: 2px @pokemonMidnight solid;
   display: flex;
   justify-content: center;
   overflow-y: visible;
@@ -148,7 +148,7 @@ h1 {
     height: 465px;
   }
 
-  h2 {
+  .indexPokeName {
     font-family: @cabin;
     color: @pokemonMidnight;
     font-size: 2.6rem;
@@ -218,5 +218,90 @@ h1 {
 
       // background-color: pink;
     }
+  }
+}
+.makeYellow {
+  background-color: @pokemonYellow;
+}
+.containerDemo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 950px;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-image: url(../images/pikachuPaper.png);
+  background-repeat: repeat;
+  border-left: 2px solid @pokemonMidnight;
+  border-right: 2px solid @pokemonMidnight;
+}
+
+.demoPokeName {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  border-bottom: solid 2px @pokemonMidnight;
+  background-color: rgba(99, 115, 204, 0.8);
+
+  h2 {
+    font-family: @cabin;
+    color: @pokemonMidnight;
+    font-size: 2.6rem;
+    padding: 4px 0;
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+  }
+}
+
+.evolveButton {
+  text-align: center;
+  vertical-align: middle;
+  box-shadow: 2px 2px black;
+  background-color: @pokemonYellow;
+  border: 1px solid @pokemonDarkBlue;
+  margin: 10px 20px;
+  padding: 5px 15px 0 15px;
+  color: @pokemonDarkBlue;
+  font-family: @cabin;
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: none;
+}
+.pokeballContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.pokeball img {
+  width: inherit;
+}
+
+.pokeball {
+  cursor: pointer;
+  width: 200px;
+  height: 293px;
+  position: relative;
+  @media (max-width: 700px) {
+    width: 150px;
+    height: 220px;
+  }
+}
+
+.positionAbsolute {
+  position: absolute;
+}
+
+.pokeballTop {
+  top: 93px;
+  @media (max-width: 700px) {
+    top: 70px;
   }
 }

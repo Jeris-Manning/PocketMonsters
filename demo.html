@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Pokemon Field Guide</title>
-</head>
-<body>
-  <h1>EXISTS</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+    <title>Pokemon Field Guide</title>
+  </head>
+  <body class="makeYellow">
+    <div class="containerDemo">
+      <div class="headerAccent">
+        <a href="index.html"
+          ><h1>Pokemon Field<br />Reference</h1></a
+        >
+
+        <div class="actionLinks">
+          <a href="#">Create Account</a>
+          <a href="#">Log In</a>
+        </div>
+      </div>
+
+      <div class="pokeComponent">
+        <div class="demoPokeName">
+          <h2 class="pokeName"></h2>
+          <div class="evolveButton">EVOLVE</div>
+        </div>
+        <div class="pokemonDisplay">
+          <div class="spriteContainer">
+            <img class="currentSprite" src="" alt="" />
+          </div>
+          <div class="pokemonStats">
+            <h3>Species: <span></span></h3>
+            <h3>Type: <span></span></h3>
+            <h3>HP: <span></span></h3>
+            <h3>Attack: <span></span></h3>
+            <h3>Defense: <span></span></h3>
+            <h3>Speed: <span></span></h3>
+            <h3>Ability 1: <span></span></h3>
+            <h3>Ability 2: <span></span></h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="pokeballContainer">
+        <div class="pokeball">
+          <img
+            class="pokeballTop positionAbsolute"
+            src="images/pokeballTop.png"
+          /><img src="images/pokeballPoliwag.png" alt="Poliwag in a pokeball" />
+        </div>
+        <div class="pokeball">
+          <img
+            class="pokeballTop positionAbsolute"
+            src="images/pokeballTop.png"
+          /><img src="images/pokeballKrabby.png" alt="Krabby in a pokeball" />
+        </div>
+        <div class="pokeball">
+          <img
+            class="pokeballTop positionAbsolute"
+            src="images/pokeballTop.png"
+          /><img src="images/pokeballWeedle.png" alt="Weedle in a pokeball" />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+  <script>
+    displayPokemon.call(pokeArray[0]);
+  </script>
 </html>
