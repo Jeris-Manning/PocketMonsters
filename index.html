@@ -5,21 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/index.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+    <script src="index.js" async></script>
     <title>Pocket Monsters</title>
   </head>
   <body class="landing">
     <div class="container">
+        <!-- <a href="demo.html"><div class="haunterCTA">
+            <h2>SEE DEMO<br>TO<br>LEARN MORE!</h2>
+          </div></a> -->
+
       <img class="squirtle" src="images\squirtleTran.png" alt="squirtle" />
 
       <div class="main">
-        <h1>PokeMentor</h1>
-        <div class="haunterCTA"></div>
-        <div class="pokemonDisplay">
-          <div class="spriteContainer">
-            <img src="images/poliwag.png" alt="poliwag">
+        <div class="headerAccent">
+          <h1>Pokemon Field<br />Reference</h1>
+
+          <div class="actionLinks">
+            <a href="#">Create Account</a>
+            <a href="#">Log In</a>
           </div>
-          <div class="pokemonStats"></div>
         </div>
+        <a href="demo.html"><div class="haunterCTA">
+          <h2>SEE DEMO<br>TO<br>LEARN MORE!</h2>
+        </div></a>
+        <div class="pokeComponent">
+          <h2 class="pokeName">Poliwag</h2>
+          <div class="pokemonDisplay">
+            <div class="spriteContainer">
+              <img
+                class="currentSprite"
+                src="images/poliwag.png"
+                alt="poliwag"
+              />
+            </div>
+            <div class="pokemonStats">
+              <h3>Species: <span></span></h3>
+              <h3>Type: <span></span></h3>
+              <h3>HP: <span></span></h3>
+              <h3>Attack: <span></span></h3>
+              <h3>Defense: <span></span></h3>
+              <h3>Speed: <span></span></h3>
+              <h3>Ability 1: <span></span></h3>
+              <h3>Ability 2: <span></span></h3>
+            </div>
+          </div>
+        </div>
+        
       </div>
 
       <img
